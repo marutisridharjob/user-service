@@ -19,11 +19,11 @@ public class UserController {
 
         User userOne = new User(userId, "User Name" + userId, "XXXXX" + userId);
 
-        Posts posts = restTemplate.getForObject("http://localhost:8081/post/1", Posts.class);
+        Posts posts = restTemplate.getForObject("http://post-service/post/1", Posts.class);  // "http://localhost:8081/post/1"
 
         userOne.setPosts(posts);
 
-        Notifications notifications = restTemplate.getForObject("http://localhost:8080/notification/1", Notifications.class);
+        Notifications notifications = restTemplate.getForObject("http://notification-service/notification/1", Notifications.class); // "http://localhost:8080/notification/1"
 
         userOne.setNotifications(notifications);
 

@@ -1,7 +1,5 @@
 package com.example.userservice;
 
-import java.util.List;
-
 public class User {
     private String userId;
     private String userName;
